@@ -1,9 +1,13 @@
 import React from 'react';
+import Pokemon from './components/pokemon';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './main.css'
 
 function App() {
   return (
-    <h1>Pokedex</h1>
-  
+    <>
+    <Pokemon/>
+  </>
   );
 }
 
