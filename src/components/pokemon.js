@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Informacion from './Informacion';
+import Buscar2 from './Buscar2';
 
 
 class Pokemon extends Component {
@@ -7,23 +8,9 @@ class Pokemon extends Component {
         super(props);
         this.state = {
             pokemones: [],
-            name: "tati"
+            nombrePoke: ""
         }
     }
-
-    // componentDidMount() {
-    //     fetch('https://pokeapi.co/api/v2/pokemon?limit=25&offset=0/results',{
-    //         method:'GET'
-    //     })
-    //         .then((respuesta) =>
-    //             respuesta.json())
-    //         .then((datos) =>
-    //             this.setState({
-    //                 datosPokemon: datos
-    //             })
-    //         )
-    //         .catch((console.error('error en carga de datos')))
-    // }
 
     componentDidMount() {
         let URL = "https://pokeapi.co/api/v2/pokemon?limit=25&offset=0";
@@ -54,18 +41,23 @@ class Pokemon extends Component {
             )
             .catch((error) => console.error(error));
     }
+    handlerChange = (e) => {
+        this.setState({
+            nombrePoke: e.target.value
+        })
+    }
 
     render() {
-        // this.cargarPokemon();
-        if (this.state.pokemones.length >= 1) {
-            return (
-                <Informacion
-                    pokemones={this.state.pokemones}
-                />
-            )
-        } else {
-            return <p>No hay datos</p>
-        }
+        return (<div>
+            <Buscar2
+            handlerChange={(e)=>this.handlerChange(e)}
+            nombrePoke={this.state.nombrePoke}
+            />
+            <Informacion 
+            pokemones={this.state.pokemones}
+            nombrePoke={this.state.nombrePoke}
+            />
+        </div>)
     }
 
 }
