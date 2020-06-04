@@ -50,12 +50,12 @@ class Pokemon extends Component {
     render() {
         return (<div>
             <Buscar2
-            handlerChange={(e)=>this.handlerChange(e)}
-            nombrePoke={this.state.nombrePoke}
+                handlerChange={(e) => this.handlerChange(e)}
+                nombrePoke={this.state.nombrePoke}
             />
-            <Informacion 
-            pokemones={this.state.pokemones}
-            nombrePoke={this.state.nombrePoke}
+            <Informacion
+                pokemones={this.state.pokemones}
+                nombrePoke={this.state.nombrePoke}
             />
         </div>)
     }

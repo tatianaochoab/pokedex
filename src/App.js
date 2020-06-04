@@ -9,12 +9,12 @@ import Detalles from './components/Detalles';
 function App() {
   return (
     <HashRouter> {/* envolvemos nuestra aplicación en el Router  */}
-    <Switch> {/* también la envolvemos en el componente Switch */}
-      <Route path="/" component={Pokemon} exact /> {/* y creamos nuestras rutas */}
-      <Route path="/informacion" component={Informacion} exact />
-      <Route path="/informacion/:informacionId" component={Detalles} exact />
-    </Switch>
-  </HashRouter>
+      <Switch> {/* también la envolvemos en el componente Switch */}
+        <Route path="/" component={Pokemon} exact /> {/* y creamos nuestras rutas */}
+        <Route path="/informacion" component={Informacion} exact />
+        <Route path="/informacion/:informacionId" component={Detalles} exact />
+      </Switch>
+    </HashRouter>
   );
 }
 
