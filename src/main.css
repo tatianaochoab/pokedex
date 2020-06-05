@@ -1,4 +1,78 @@
-.img-1{
-    width: 50%;
-    height: 50%;
+/* .total{
+    background-image: url(./components/images/fondo.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+} */
+
+.contenido-total {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
 }
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.titulo img{
+    width: 50%;
+}
+
+.buscador {
+    border: solid 1px black;
+    margin: 20px 0px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .contenido-pokemones {
+   padding: 30px;
+}  */
+
+.contenido-pokemones .tarjeta {
+    margin: 10px;
+    border-radius: 10px;
+    background: #fff);
+    border: solid 2px rgb(255, 218, 53);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    font-size: 11pt;
+}
+
+.tarjeta .conte-selfie {
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta .conte-selfie .selfie {
+    width: 100%;
+}
+
+.tarjeta .cuerpo-tarjeta {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.tarjeta .cuerpo-tarjeta .tarjeta-identidad {
+    padding: 5px 10px;
+}
+
+.tarjeta .cuerpo-tarjeta .tarjeta-tipos {
+    padding: 5px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.tarjeta .cuerpo-tarjeta .tarjeta-tipos .tipo {
+    width: 50%;
+    text-align: center;
+}
+

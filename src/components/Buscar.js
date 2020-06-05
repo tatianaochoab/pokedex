@@ -44,7 +44,7 @@ class Buscar extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='buscador'>
                 <label htmlFor='buscarPoke'>Busca tu Pokemon favorito</label>
                 <input type='text' id='buscarPoke' onChange={this.handlerChange} value={this.state.nombrePoke} ></input>
                 <button onClick={this.buscarPokemon}>Buscar</button>

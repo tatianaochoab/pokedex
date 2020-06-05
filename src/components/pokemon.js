@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Informacion from './Informacion';
 import Buscar2 from './Buscar2';
+import Image from './images/pokemon.png'
 
 
 class Pokemon extends Component {
@@ -48,16 +49,22 @@ class Pokemon extends Component {
     }
 
     render() {
-        return (<div>
-            <Buscar2
-                handlerChange={(e) => this.handlerChange(e)}
-                nombrePoke={this.state.nombrePoke}
-            />
-            <Informacion
-                pokemones={this.state.pokemones}
-                nombrePoke={this.state.nombrePoke}
-            />
-        </div>)
+        return (
+            <div className='total'>
+                <div className='container container-sm  container-fluid contenido-total'>
+                    <div className='titulo'><img src={Image} /></div>
+                    <Buscar2
+                        handlerChange={(e) => this.handlerChange(e)}
+                        nombrePoke={this.state.nombrePoke}
+                    />
+                    <Informacion
+                        pokemones={this.state.pokemones}
+                        nombrePoke={this.state.nombrePoke}
+                    />
+                     <footer><small>Copyright ©2020 Tatiana Ochoa Bautista</small></footer>
+                </div>
+            </div>
+        )
     }
 
 }
